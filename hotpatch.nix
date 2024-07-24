@@ -16,7 +16,7 @@ kernel.overrideAttrs (old: {
     ls -la $PWD/..
     echo PWD
     ls -la $PWD
-    kpatch-build -d -c ${kernel.configfile} -v ${kernel.dev}/vmlinux -s $PWD/source ${patch} \
+    kpatch-build -c ${kernel.configfile} -v ${kernel.dev}/vmlinux -s $PWD/source ${patch} \
              --skip-distro-check \
              -j$NIX_BUILD_CORES
 
