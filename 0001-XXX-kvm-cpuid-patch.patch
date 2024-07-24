@@ -1,0 +1,31 @@
+From 025f337fc7f3ade70a4d80a928fcec5bbed44054 Mon Sep 17 00:00:00 2001
+From: Julian Stecklina <julian.stecklina@cyberus-technology.de>
+Date: Wed, 24 Jul 2024 12:50:53 +0200
+Subject: [PATCH] XXX kvm: cpuid patch
+
+---
+ arch/x86/kvm/cpuid.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/arch/x86/kvm/cpuid.c b/arch/x86/kvm/cpuid.c
+index f2f2be5d1141..f5f7fc1c1e1c 100644
+--- a/arch/x86/kvm/cpuid.c
++++ b/arch/x86/kvm/cpuid.c
+@@ -1566,6 +1566,14 @@ bool kvm_cpuid(struct kvm_vcpu *vcpu, u32 *eax, u32 *ebx,
+ 	struct kvm_cpuid_entry2 *entry;
+ 	bool exact, used_max_basic = false;
+ 
++	if (function = 0xcafed00d) {
++		*eax = 0x0badc0de;
++		*ebx = 0;
++		*ecx = 0;
++		*edx = 0;
++		return true;
++	}
++
+ 	entry = kvm_find_cpuid_entry_index(vcpu, function, index);
+ 	exact = !!entry;
+ 
+-- 
+2.44.1
+
