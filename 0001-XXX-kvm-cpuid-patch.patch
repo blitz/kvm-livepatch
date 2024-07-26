@@ -1,22 +1,36 @@
-From 025f337fc7f3ade70a4d80a928fcec5bbed44054 Mon Sep 17 00:00:00 2001
+From 392671c70d7a14685d6c36a2aa1c0aec0c3a513b Mon Sep 17 00:00:00 2001
 From: Julian Stecklina <julian.stecklina@cyberus-technology.de>
 Date: Wed, 24 Jul 2024 12:50:53 +0200
 Subject: [PATCH] XXX kvm: cpuid patch
 
 ---
- arch/x86/kvm/cpuid.c | 8 ++++++++
- 1 file changed, 8 insertions(+)
+ arch/x86/kvm/cpuid.c | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
 
 diff --git a/arch/x86/kvm/cpuid.c b/arch/x86/kvm/cpuid.c
-index f2f2be5d1141..f5f7fc1c1e1c 100644
+index f2f2be5d1141..fb33a3adc828 100644
 --- a/arch/x86/kvm/cpuid.c
 +++ b/arch/x86/kvm/cpuid.c
-@@ -1566,6 +1566,14 @@ bool kvm_cpuid(struct kvm_vcpu *vcpu, u32 *eax, u32 *ebx,
+@@ -1566,6 +1566,28 @@ bool kvm_cpuid(struct kvm_vcpu *vcpu, u32 *eax, u32 *ebx,
  	struct kvm_cpuid_entry2 *entry;
  	bool exact, used_max_basic = false;
  
-+	if (function = 0xcafed00d) {
++	switch (function) {
++	case 0xcafed00d:
 +		*eax = 0x0badc0de;
++		*ebx = 0;
++		*ecx = 0;
++		*edx = 0;
++		return true;
++	case 0x80000002:
++		*eax = 0x202b2b2b;
++		*ebx = 0x63746150; /* 'Patc' */
++		*ecx = 0x21646568; /* 'hed!' */
++		*edx = 0x2b2b2b20;
++		return true;
++	case 0x80000003:
++	case 0x80000004:
++		*eax = 0;
 +		*ebx = 0;
 +		*ecx = 0;
 +		*edx = 0;
