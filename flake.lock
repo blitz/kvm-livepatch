@@ -545,11 +545,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1722251976,
-        "narHash": "sha256-RdKug7a/vorO+nyfP6uQylhUzjH6PNgrHxqjPtToD0w=",
+        "lastModified": 1722262392,
+        "narHash": "sha256-AkEQaWF79SnEgzG+uXfSkijP3fAgDFdq6jvMWtkGlf8=",
         "owner": "blitz",
         "repo": "nix-configs",
-        "rev": "08b979ddf1ba76de8d2cf2ee227863c60587c291",
+        "rev": "9aa4be92e03a521eefcbfc1200b0e762091610ba",
         "type": "github"
       },
       "original": {
