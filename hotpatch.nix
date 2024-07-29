@@ -13,15 +13,9 @@ kernel.overrideAttrs (old: {
     runHook preBuild
 
     export CACHEDIR=$(mktemp -d)
-    ls -la $PWD/..
-    echo PWD
-    ls -la $PWD
     kpatch-build -c ${kernel.configfile} -v ${kernel.dev}/vmlinux -s $PWD/source ${patch} \
              --skip-distro-check \
              -j$NIX_BUILD_CORES
-
-    echo XXXXXXXXXXX
-    find . -name "*.ko"
 
     runHook postBuild
   '';
