@@ -14,7 +14,6 @@ kernel.overrideAttrs (old: {
 
     export CACHEDIR=$(mktemp -d)
     kpatch-build -c ${kernel.configfile} -v ${kernel.dev}/vmlinux -s $PWD/source ${patch} \
-             --skip-distro-check \
              -j$NIX_BUILD_CORES
 
     runHook postBuild
