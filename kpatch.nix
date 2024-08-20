@@ -7,7 +7,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "blitz";
     repo = "kpatch";
     rev = "nixos-fixes";
-    hash = "sha256-V4kFVYFFAVFgnFFs7B7ofbv/jNSKbhSHh0tgvsVh8jQ=";
+    hash = "sha256-7LUOSoHxaskgQ9bcXlSposcU8Y5Ry+89hnUny74XrE8=";
   };
 
   nativeBuildInputs = [
