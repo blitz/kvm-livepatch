@@ -12,7 +12,9 @@
     devShells.x86_64-linux.default = pkgs.mkShell {
       packages = [ pkgs.gnumake self.packages.x86_64-linux.kpatch ];
 
-      KERNEL_BUILD_DIR = "${nix-configs.nixosConfigurations.avalon.config.boot.kernelPackages.kernel.dev}";
+      # In case we want to build kpatches in the devshell:
+      #
+      # KERNEL_BUILD_DIR = "${nix-configs.nixosConfigurations.avalon.config.boot.kernelPackages.kernel.dev}";
     };
 
     packages.x86_64-linux = {
