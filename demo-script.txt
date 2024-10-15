@@ -1,0 +1,7 @@
+- show patch
+- show windows
+
+l1tf-demo# while true; do sudo nice -n -19 taskset -c 6 ./result/bin/timer; done
+
+kvm-livepatch# while true; do sudo kpatch load ./result/livepatch-bnyl1jysffj15q7kip4kmh0yk5z3xqnf-0001-XXX-kvm.ko; sleep 1; sudo kpatch unload --all; done
+
