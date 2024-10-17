@@ -430,11 +430,11 @@
         "rust-overlay": "rust-overlay_2"
       },
       "locked": {
-        "lastModified": 1729028850,
-        "narHash": "sha256-eOhjiU+3TCaSYZESYhU2ZTUQKrBcer9cQ/XpVkergAg=",
+        "lastModified": 1729064530,
+        "narHash": "sha256-oSr/w/5dvf/8ll6NvQlL7+rrK8wzjIcEMP1LvI4Ag08=",
         "owner": "nix-community",
         "repo": "lanzaboote",
-        "rev": "bd01eac8c7cfa9b7e25304f0e7f0fed80de63f9d",
+        "rev": "2fa1368f938b50e35ca87334b5aeba38a3402165",
         "type": "github"
       },
       "original": {
@@ -535,11 +535,11 @@
         "nixpkgs-unstable": "nixpkgs-unstable"
       },
       "locked": {
-        "lastModified": 1729039394,
-        "narHash": "sha256-L+ZYfu2GeT1r4Xh56V+zfvjcm51GiZHyI3VxPUBqXT8=",
+        "lastModified": 1729125787,
+        "narHash": "sha256-9DtoUKGR0VEC7Kj7SvcPyqFw1z5C2CKLNYoJO54dFHY=",
         "owner": "blitz",
         "repo": "nix-configs",
-        "rev": "44647e7c0b74df5ac5dfb06658b06600d7d47d23",
+        "rev": "cb3b29bc19b608b82955b0ee7d7f51294196f3a2",
         "type": "github"
       },
       "original": {
