@@ -492,11 +492,11 @@
         "nixpkgs-unstable": "nixpkgs-unstable"
       },
       "locked": {
-        "lastModified": 1729544579,
-        "narHash": "sha256-mTrlC8S2IJwTm5th74W1d5RHUv71zlYr9uIY6rvk2Vc=",
+        "lastModified": 1729546269,
+        "narHash": "sha256-xQ79jvs9JdN2j2mpatlwZOUGgzP1X81QqbajsQxdhAU=",
         "owner": "blitz",
         "repo": "nix-configs",
-        "rev": "c84029a17db8eb03f3e18ba729a66f05c5c9784e",
+        "rev": "6e164ec9947c2470724a8c19237fb49ef1198296",
         "type": "github"
       },
       "original": {
